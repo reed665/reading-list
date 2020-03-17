@@ -19,6 +19,7 @@ const BookContextProvider = (props) => {
   const [books, setBooks] = useState([
     newBook('name of the wind', 'patrick rothuss'),
     newBook('the final empire', 'brandon sanderson'),
+    newBook('book with no author'),
   ])
 
   const addBook = (title, author) => {
