@@ -1,0 +1,11 @@
+.BookItem {
+  cursor: pointer;
+}
+.BookItem:hover {
+  text-decoration: line-through;
+}
+
+.BookItem .book-title,
+.BookItem .book-author {
+  text-transform: capitalize;
+}

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import './BookList.css';
 import { BookContext } from '../contexts/BookContext';
+import BookItem from './BookItem';
 
 const BookList = () => {
   const { books } = useContext(BookContext)
@@ -19,8 +20,7 @@ const BookList = () => {
         {books.map(book => {
           return (
             <li key={book.id}>
-              <span className="book-title">{book.title}</span>
-              {book.author && <span> by <span className="book-author">{book.author}</span></span>}
+              <BookItem book={book} />
             </li>
           )
         })}
