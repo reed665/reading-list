@@ -8,7 +8,7 @@ const BookItem = ({ book }) => {
   return (
     <span className="BookItem" onClick={() => removeBook(book.id)}>
       <span className="book-title">{book.title}</span>
-      {book.author && <span> by <span className="book-author">{book.author}</span></span>}
+      {book.author && <span className="by-author"> by <span className="book-author">{book.author}</span></span>}
     </span>
   );
 }

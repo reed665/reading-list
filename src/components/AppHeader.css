@@ -1,0 +1,16 @@
+.AppHeader {
+  padding: 10px 15px;
+  display: flex;
+  align-items: baseline;
+  background: var(--smoky-black);
+  color: var(--honeydew);
+}
+
+.AppHeader h2 {
+  margin: 0;
+}
+
+.AppHeader p {
+  margin: 0 0 0 15px;
+  color: var(--dust-storm);
+}

@@ -1,3 +1,54 @@
 .BookForm {
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.BookForm .form-item {
+  flex: 2;
+  display: flex;
+  align-items: center;
+}
+
+.BookForm .form-item:not(:first-child) {
+  margin: 10px 0 0 0;
+}
+
+.BookForm .form-item:last-child {
+  flex: 1;
+}
+
+.BookForm input,
+.BookForm button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+}
+
+.BookForm input {
+  background: var(--wenge);
+  color: var(--honeydew);
+}
+.BookForm input::placeholder {
+  color: var(--dust-storm);
+}
+
+.BookForm button {
+  text-transform: uppercase;
+  background: var(--honeydew);
+  color: var(--smoky-black);
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 861px) {
+  .BookForm {
+    flex-direction: row;
+  }
+
+  .BookForm .form-item:not(:first-child) {
+    margin: 0 0 0 15px;
+  }
+
 }

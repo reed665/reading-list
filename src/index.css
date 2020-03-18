@@ -1,3 +1,11 @@
+:root {
+  --honeydew: #EFF9F0;
+  --dust-storm: #DDC8C4;
+  --copper-rose: #896A67;
+  --wenge: #6B4D57;
+  --smoky-black: #13070C;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,4 +13,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--dust-storm);
+  overflow-y: scroll;
 }

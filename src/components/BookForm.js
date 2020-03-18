@@ -1,4 +1,5 @@
 import React, { useContext, useState, useRef } from 'react';
+import './BookForm.css';
 import { BookContext } from '../contexts/BookContext';
 
 const BookForm = () => {
@@ -24,17 +25,17 @@ const BookForm = () => {
 
   return (
     <form className="BookForm" onSubmit={addBookOnSubmit}>
-      <label>
-        <span>Title</span>
-        <input type="text" ref={titleInputEl} value={title} onChange={(event) => setTitle(event.target.value)} />
+      <label className="form-item">
+        <input type="text" placeholder="Title" ref={titleInputEl} value={title} onChange={(event) => setTitle(event.target.value)} />
       </label>
 
-      <label>
-        <span>Author</span>
-        <input type="text" value={author} onChange={(event) => setAuthor(event.target.value)} />
+      <label className="form-item">
+        <input type="text" placeholder='Author' value={author} onChange={(event) => setAuthor(event.target.value)} />
       </label>
 
-      <button>Add book</button>
+      <div className="form-item">
+        <button>Add book</button>
+      </div>
     </form>
   );
 }

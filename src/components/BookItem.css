@@ -1,8 +1,16 @@
 .BookItem {
   cursor: pointer;
+  display: flex;
+  justify-content: space-between;
 }
 .BookItem:hover {
   text-decoration: line-through;
+}
+
+.BookItem .by-author {
+  padding-left: 5px;
+  color: var(--dust-storm);
+  text-align: right;
 }
 
 .BookItem .book-title,
