@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useRef } from 'react';
 import { BookContext } from '../contexts/BookContext';
 
 const BookForm = () => {
@@ -6,6 +6,8 @@ const BookForm = () => {
 
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
+        
+  const titleInputEl = useRef(null)
 
   const addBookOnSubmit = (event) => {
     event.preventDefault()
@@ -17,13 +19,14 @@ const BookForm = () => {
     addBook(title, author)
     setTitle('')
     setAuthor('')
+    titleInputEl.current.focus()
   }
 
   return (
     <form className="BookForm" onSubmit={addBookOnSubmit}>
       <label>
         <span>Title</span>
-        <input type="text" value={title} onChange={(event) => setTitle(event.target.value)} />
+        <input type="text" ref={titleInputEl} value={title} onChange={(event) => setTitle(event.target.value)} />
       </label>
 
       <label>
