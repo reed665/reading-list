@@ -3,7 +3,7 @@ import './BookForm.css';
 import { BookContext } from '../contexts/BookContext';
 
 const BookForm = () => {
-  const { addBook } = useContext(BookContext)
+  const { dispatch: dispatchBookAction } = useContext(BookContext)
 
   const [title, setTitle] = useState('')
   const [author, setAuthor] = useState('')
@@ -17,7 +17,7 @@ const BookForm = () => {
       return;
     }
 
-    addBook(title, author)
+    dispatchBookAction({ type: 'ADD_BOOK', book: { title, author } })
     setTitle('')
     setAuthor('')
     titleInputEl.current.focus()
